@@ -1,0 +1,29 @@
+
+repos:
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.5.0
+      hooks:
+        -   id: trailing-whitespace
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: check-added-large-files
+        -   id: check-merge-conflict
+        -   id: detect-aws-credentials
+  -   repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+      rev: v2.12.0
+      hooks:
+        - id: pretty-format-kotlin
+          args: [ --autofix ]
+          files: ^.*\.kt$
+  - repo: https://github.com/radix-ai/auto-smart-commit # Makes JIRA ID optional in git commit message. Side-effect logs time spent on ticket which is not exact
+    rev: v1.0.3
+    hooks:
+      - id: auto-smart-commit
+  - repo: local
+    hooks:
+      - id: detekt
+        name: detekt check
+        description: Runs `detekt` on modified .kt files.
+        language: script
+        entry: detekt/detekt.sh
+        files: \.kt
