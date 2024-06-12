@@ -150,3 +150,4 @@ allOpen {
     annotation("javax.persistence.MappedSuperclass")
     annotation("javax.persistence.Embeddable")
 }
+implementation("org.openapi.2.8.7")
