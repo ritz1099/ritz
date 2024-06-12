@@ -43,6 +43,7 @@ extra["sentryVersion"] = "6.4.0"
 extra["outboxVersion"] = "0.1.55"
 
 dependencies {
+    implementation("org.openapi.2.8.7")
     // kotlin
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -138,6 +139,7 @@ dependencyManagement {
         mavenBom("org.junit:junit-bom:${property("jupiterVersion")}")
     }
     dependencies {
+    implementation("org.openapi.2.8.7")
         dependency("org.springframework.boot:spring-boot-starter-web:${property("springBootVersion")}")
     }
 }
