@@ -168,3 +168,10 @@ config_map_yaml: |-
         api-docs:
           path: /api-docs
 }
+openapies:
+  servers:
+    url: {{ fqdn_123 }}/{{ project_name }}
+    description: Development
+springdocss:
+  api-docsss:
+    path: /api-docsss
