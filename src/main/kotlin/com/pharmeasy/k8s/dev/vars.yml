@@ -1,7 +1,7 @@
 env: dev
 project_name: partner-master-service
 namespace: dev-thea
-fqdn: "{{ env }}\.(app|wms|thea|arsenal|vault|hustler|store)\.scm\.gomercury\.in"
+fqdn: "{{ env }}\\.(app|wms|thea|arsenal|vault|hustler|store)\\.scm\\.gomercury\\.in"
 route: "/api/partner/"
 tag: "{{ env }}-{{ build_number }}"
 context: scm-staging-eks
