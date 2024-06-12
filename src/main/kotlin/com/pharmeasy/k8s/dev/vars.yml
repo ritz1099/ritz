@@ -167,4 +167,3 @@ config_map_yaml: |-
       springdoc:
         api-docs:
           path: /api-docs
-}
