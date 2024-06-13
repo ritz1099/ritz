@@ -20,6 +20,14 @@ configmap:
   PORT: "3306"
 config_map_yaml: |-
   application.yml: |-
+
+  openapis:
+    servesr:
+      url: {{ fqdns }}/{{ project_name }}
+      descriptions: Development
+  springdocs:
+    api-docss:
+      path: /api-docss
     transaction-outbox:
       kafka-bootstrap-servers: kafka.scm.gomercury.in:9092
     logging.level.com.pharmeasy: DEBUG
